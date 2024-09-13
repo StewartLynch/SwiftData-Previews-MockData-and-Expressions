@@ -15,11 +15,11 @@ struct GenresTabView: View {
             List(genres) { genre in
                 HStack {
                     Text(genre.name)
-                        .foregroundStyle(genre.textColor)
                     Spacer()
-                    Text(genre.books.count, format: .number)
+                    Text("^[\(genre.books.count) book](inflect: true)")
                 }
                 .listRowBackground(genre.colorStyle)
+                .foregroundStyle(genre.textColor)
             }
             .navigationTitle("Genres")
         }

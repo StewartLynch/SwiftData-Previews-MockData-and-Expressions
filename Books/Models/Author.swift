@@ -12,20 +12,19 @@ import SwiftData
 class Author {
     var firstName: String
     var lastName: String
-    var books: [Book] = []
+    var books: [Book]
     
     var fullName: String {
         (firstName + " " + lastName).trimmingCharacters(in: .whitespaces)
     }
     
-//    init(firstName: String, lastName: String, books: [Author]) {
-//        self.firstName = firstName
-//        self.lastName = lastName
-//        self.books = books
-//    }
-    
-    init(firstName: String, lastName: String) {
+    init(firstName: String, lastName: String, books: [Book]) {
         self.firstName = firstName
         self.lastName = lastName
+        self.books = books
+    }
+    
+    convenience init(firstName: String, lastName: String) {
+        self.init(firstName: firstName, lastName: lastName, books: [])
     }
 }

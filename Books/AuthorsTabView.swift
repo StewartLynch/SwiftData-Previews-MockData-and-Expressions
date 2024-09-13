@@ -16,8 +16,7 @@ struct AuthorsTabView: View {
                 HStack {
                     Text(author.fullName)
                     Spacer()
-                    
-                        Text(author.books.count, format: .number)
+                    Text("^[\(author.books.count) book](inflect: true)")
                 }
             }
             .navigationTitle("Authors")

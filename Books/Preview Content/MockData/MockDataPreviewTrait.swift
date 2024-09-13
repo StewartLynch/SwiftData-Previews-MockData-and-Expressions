@@ -30,25 +30,28 @@ struct MockData: PreviewModifier {
         
         let genres = try? container.mainContext.fetch(FetchDescriptor<Genre>())
         let authors = try? container.mainContext.fetch(FetchDescriptor<Author>())
+        
         if let genres, let authors {
             importData?.books.forEach { bookI in
                 // Find the matching genre
                 guard let genre = genres.first( where: {$0.name == bookI.genre}) else {
-//                    fatalError("Could not find genre")
-                    print("🇨🇦Could not find \(bookI.genre)")
+                    print("📍Could not find \(bookI.genre)")
                     return
                 }
-                
+                // Create a new book with name and genre
                 let book = Book(name: bookI.name, genre: genre)
-                // append the authors
+                // append the book to the genre's books array
+                genre.books.append(book)
+                // find authors
                 bookI.authorIds.forEach { authorFullName in
                     guard let author = authors.first(where: {$0.fullName == authorFullName}) else {
-                        print("could not find \(authorFullName)")
+                        print("📍Could not find \(authorFullName)")
                         return
                     }
-                        
+                    // append the author to the books' authors array
                     book.authors.append(author)
                 }
+                // Insert the book into the database
                 container.mainContext.insert(book)
             }
         }

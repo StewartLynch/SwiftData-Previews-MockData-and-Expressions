@@ -13,7 +13,7 @@ class Genre {
     var name: String
     var color: String
     @Relationship(inverse: \Book.genre)
-    var books: [Book] = []
+    var books: [Book]
     
     // Computed property used to determine the foreground style for Genre tag
     var colorStyle: Color {
@@ -23,14 +23,14 @@ class Genre {
         colorStyle.adaptedTextColor()
     }
     
-    init(name: String, color: String) {
+    init(name: String, color: String, books: [Book]) {
         self.name = name
         self.color = color
+        self.books = books
     }
-    init(name: String, color: Color) {
-        self.name = name
-        self.color = color.toHexString()!
+  
+    convenience init(name: String, color: String) {
+        self.init(name: name, color: color, books: [])
     }
-    
     
 }
