@@ -34,8 +34,7 @@ struct BookCommentView: View {
     }
 }
 
-#Preview(traits: .mockData) {
-    @Previewable @Query var books: [Book]
-    BookCommentView(book: books.first!)
-}
+//#Preview {
+//    BookCommentView(book: )
+//}
 

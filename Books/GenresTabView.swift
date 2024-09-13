@@ -26,6 +26,6 @@ struct GenresTabView: View {
     }
 }
 
-#Preview(traits: .mockData) {
+#Preview {
     GenresTabView()
 }

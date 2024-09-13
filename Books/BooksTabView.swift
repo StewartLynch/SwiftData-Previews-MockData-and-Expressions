@@ -6,50 +6,45 @@
 //
 
 import SwiftUI
-
-enum SortOrder: String, Identifiable, CaseIterable {
-    case book, genre
-    var id: Self { self }
-}
-
-enum FilterType: String, Identifiable, CaseIterable {
-    case book, genre, author
-    var id: Self { self }
-}
+import SwiftData
 
 struct BooksTabView: View {
-    @State private var sortOrder = SortOrder.book
-    @State private var filterType = FilterType.book
-    @State private var filter = ""
+    @Query(sort: \Book.name) var books: [Book]
+    @State private var selectedBook: Book?
     var body: some View {
         NavigationStack {
-            HStack {
-                Picker("Sort Order", selection: $sortOrder) {
-                    ForEach(SortOrder.allCases) { sortOrder in
-                        Text("Sort by \(sortOrder.rawValue)").tag(sortOrder)
+            List(books) { book in
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(book.name)
+                            .font(.title)
+                        Spacer()
+                        Text(book.genre.name)
+                            .tagStyle(genre: book.genre)
+                    }
+                    HStack {
+                        Text(book.allAuthors)
+                        Spacer()
+                        Button {
+                            selectedBook = book
+                        } label: {
+                            Image(systemName: "message")
+                                .symbolVariant(book.comment.isEmpty ? .none : .fill)
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
-                .buttonStyle(.bordered)
-                Spacer()
-                Picker("Filter Type", selection: $filterType) {
-                    ForEach(FilterType.allCases) { filterType in
-                        Text("Filter by \(filterType.rawValue)").tag(filterType)
-                    }
-                }
-                .buttonStyle(.bordered)
             }
-            .padding(.horizontal)
-            BookList(
-                sortOrder: sortOrder,
-                filterType: filterType,
-                filter: filter
-            )
-            .searchable(text: $filter, prompt: Text("Enter search criteria"))
+            .listStyle(.plain)
+            .sheet(item: $selectedBook) { book in
+                BookCommentView(book: book)
+                    .presentationDetents([.height(300)])
+            }
             .navigationTitle("Books")
         }
     }
 }
 
-#Preview(traits: .mockData) {
+#Preview {
     BooksTabView()
 }

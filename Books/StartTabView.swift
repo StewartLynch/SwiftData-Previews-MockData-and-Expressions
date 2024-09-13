@@ -22,10 +22,8 @@ struct StartTabView: View {
             }
         }
     }
-    
 }
 
 #Preview {
     StartTabView()
-        .modelContainer(for: Book.self, inMemory: true)
 }
