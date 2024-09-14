@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 class Author {
+    #Unique<Author>([\.firstName, \.lastName])
     var firstName: String
     var lastName: String
     var books: [Book]
