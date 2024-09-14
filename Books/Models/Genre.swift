@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 class Genre {
+    @Attribute(.unique)
     var name: String
     var color: String
     @Relationship(inverse: \Book.genre)
