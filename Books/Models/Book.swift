@@ -17,7 +17,7 @@ import SwiftData
 
 @Model
 class Book {
-    #Index<Book>([\.name], [\.genre], [\.authors])
+    #Index<Book>([\.name], [\.genre])
     var name: String
     var genre: Genre
     var comment: String = ""
