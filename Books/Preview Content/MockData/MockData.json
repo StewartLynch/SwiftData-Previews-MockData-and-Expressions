@@ -1,0 +1,164 @@
+{
+    
+    "genres": [
+        {
+            "name" : "Fantasy",
+            "color" : "#B33234"
+        },
+        {
+            "name" : "Science Fiction",
+            "color" : "#FFC300"
+        },
+        {
+            "name" : "Horror",
+            "color" : "#244026"
+        },
+        {
+            "name" : "Thriller",
+            "color" : "#462F97"
+        },
+        {
+            "name" : "Classic",
+            "color" : "#05F967"
+        }
+    ],
+    "authors": [
+        {
+            "firstName" : "Neil",
+            "lastName" : "Galman",
+            "authorId" : "Neil Galman"
+        },
+        {
+            "firstName" : "Terry",
+            "lastName" : "Pratchett",
+            "authorId" : "Terry Pratchett"
+        },
+        {
+            "firstName" : "Stephen",
+            "lastName" : "King",
+            "authorId" : "Stephen King"
+        },
+        {
+            "firstName" : "Peter",
+            "lastName" : "Straub",
+            "authorId" : "Peter Straub"
+        },
+        {
+            "firstName" : "Robert",
+            "lastName" : "Shea",
+            "authorId" : "Robert Shea"
+        },
+        {
+            "firstName" : "Robert",
+            "lastName" : "Wilson",
+            "authorId" : "Robert Wilson"
+        },
+        {
+            "firstName" : "Isaac",
+            "lastName" : "Asimov",
+            "authorId" : "Isaac Asimov"
+        },
+        {
+            "firstName" : "Ian",
+            "lastName" : "Caldwell",
+            "authorId" : "Ian Caldwell"
+        },
+        {
+            "firstName" : "J.R.R.",
+            "lastName" : "Tolkien",
+            "authorId" : "J.R.R. Tolkien"
+        },
+        {
+            "firstName" : "Dustin",
+            "lastName" : "Thompson",
+            "authorId" : "Dustin Thompson"
+        },
+        {
+            "firstName" : "Randall",
+            "lastName" : "Garrett",
+            "authorId" : "Randall Garrett"
+        },
+        {
+            "firstName" : "Harper",
+            "lastName" : "Lee",
+            "authorId" : "Harpert Lee"
+        }
+    ],
+    "books" : [
+        {
+            "name" : "Good Omens",
+            "genre" : "Fantasy",
+            "authorIds" : [
+                "Neil Galman",
+                "Terry Pratchett"
+            ]
+        },
+        {
+            "name" : "The Talisman",
+            "genre" : "Fantasy",
+            "authorIds" : [
+                "Stephen King",
+                "Peter Straub"
+            ]
+        },
+        {
+            "name" : "The Illuminati",
+            "genre" : "Science Fiction",
+            "authorIds" : [
+                "Robert Shea",
+                "Robert Wilson"
+            ]
+        },
+        {
+            "name" : "Foundation",
+            "genre" : "Science Fiction",
+            "authorIds" : [
+                "Isaac Asimov"
+            ]
+        },
+        {
+            "name" : "Sleeping Beauties",
+            "genre" : "Horror",
+            "authorIds" : [
+                "Stephen King"
+            ]
+        },
+        {
+            "name" : "The Shining",
+            "genre" : "Horror",
+            "authorIds" : [
+                "Stephen King"
+            ]
+        },
+        {
+            "name" : "Rule of Four",
+            "genre" : "Thriller",
+            "authorIds" : [
+                "Ian Caldwell",
+                "Dustin Thompson"
+            ]
+        },
+        {
+            "name" : "The Hobbit",
+            "genre" : "Fantasy",
+            "authorIds" : [
+                "J.R.R. Tolkien"
+            ]
+        },
+        {
+            "name" : "To Kill a Mockingbird",
+            "genre" : "Classic",
+            "authorIds" : [
+                "Harper Lee"
+            ]
+        },
+        {
+            "name" : "The Naked Sun",
+            "genre" : "Science Fiction",
+            "authorIds" : [
+                "Isaac Asimov",
+                "Randall Garrett"
+            ]
+        }
+    ]
+}
