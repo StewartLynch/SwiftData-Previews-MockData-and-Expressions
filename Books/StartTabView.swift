@@ -31,6 +31,6 @@ struct StartTabView: View {
     }
 }
 
-#Preview {
+#Preview(traits: .mockData) {
     StartTabView()
 }

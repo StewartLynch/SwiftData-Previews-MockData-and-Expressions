@@ -52,6 +52,6 @@ struct BooksTabView: View {
     }
 }
 
-#Preview {
+#Preview(traits: .mockData) {
     BooksTabView()
 }
