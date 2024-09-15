@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB054D1B2C978F2E00EA3DBD /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB054D1A2C978F2E00EA3DBD /* BookListView.swift */; };
 		BB125A922C96A1FF008375AF /* ImportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB125A912C96A1FF008375AF /* ImportModel.swift */; };
 		BB125A942C96A60C008375AF /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB125A932C96A600008375AF /* MockData.json */; };
 		BB125A962C9737B2008375AF /* MockDataPreviewTrait.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB125A952C9737B2008375AF /* MockDataPreviewTrait.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB054D1A2C978F2E00EA3DBD /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 		BB125A912C96A1FF008375AF /* ImportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportModel.swift; sourceTree = "<group>"; };
 		BB125A932C96A600008375AF /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
 		BB125A952C9737B2008375AF /* MockDataPreviewTrait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataPreviewTrait.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				BB9EE0C82C8E2E8B000C5047 /* BooksApp.swift */,
 				BB9EE0C92C8E2E8B000C5047 /* StartTabView.swift */,
 				BB9EE0E22C8E4DA1000C5047 /* BooksTabView.swift */,
+				BB054D1A2C978F2E00EA3DBD /* BookListView.swift */,
 				BB43DA072C9388E100E110F1 /* BookCommentView.swift */,
 				BB9EE0E42C8E4DAC000C5047 /* AuthorsTabView.swift */,
 				BB9EE0E62C8E4DBE000C5047 /* GenresTabView.swift */,
@@ -223,6 +226,7 @@
 				BB9EE0D22C8E2ED1000C5047 /* Author.swift in Sources */,
 				BB43DA0B2C93945800E110F1 /* TagStyle.swift in Sources */,
 				BB43DA082C9388E100E110F1 /* BookCommentView.swift in Sources */,
+				BB054D1B2C978F2E00EA3DBD /* BookListView.swift in Sources */,
 				BB9EE0E72C8E4DBE000C5047 /* GenresTabView.swift in Sources */,
 				BB9EE0D92C8E46B1000C5047 /* Color+Extension.swift in Sources */,
 				BB9EE0DA2C8E46B1000C5047 /* UIColor+Extension.swift in Sources */,
