@@ -40,7 +40,7 @@ struct BooksTabView: View {
                     Spacer()
                     Picker("Filter Type", selection: $filterType) {
                         ForEach(FilterType.allCases) { filterType in
-                            Text("Filter by \(filterType.rawValue)")
+                            Text("Filter by \(filterType)")
                         }
                     }
                 }
