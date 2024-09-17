@@ -25,8 +25,6 @@ enum FilterType: String, Identifiable, CaseIterable {
     var id: Self { self }
 }
 struct BooksTabView: View {
-    @Query(sort: \Book.name) var books: [Book]
-    @State private var selectedBook: Book?
     @State private var sortOrder = SortOrder.book
     @State private var filterType = FilterType.book
     @State private var filter = ""
